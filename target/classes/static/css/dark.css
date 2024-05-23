@@ -1,0 +1,277 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+/* Define your color variables */
+:root {
+  --background-color: #212529;
+  --text-color: #fff;
+  --accent-color: #034917;
+  --light-accent-color: rgba(3, 73, 23, 0.54); /* Transparent version of accent color */
+  --white: #fff;
+}
+
+/* Use the variables in your styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.home_logo a{
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    margin: 0 20px;
+    list-style: none;
+}
+
+.item a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home_side_img img {
+    width: 650px;
+}   
+
+#About {
+    text-align: center;
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    padding: 10px;
+}
+
+#About h1{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--accent-color);
+    margin-bottom: 50px;
+}
+
+.About_par {
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--light-accent-color);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.home_container {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
+.home_side_img {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+
+.home_side{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.home_side a {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.home_side h1 {
+    font-size: 45px;
+    font-weight: 900;
+}
+
+.home_side p {
+    margin-bottom: 15px;
+}
+
+
+
+@media screen and (max-width: 1828px) {
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+  }
+  @media screen and (max-width: 1606px) {
+    .home_side_img {
+        right: 3%;
+        top: 10%;
+    }
+    
+    .home_side{
+        position: absolute;
+        top: 30%;
+        left: 3%;
+    }
+    .item {
+        margin: 0 10px;
+    }
+  }
+  @media screen and (max-width: 1358px) {
+    .home_side h1 {
+        font-size: 35px;
+        font-weight: 900;
+    }
+    .home_side_img img {
+        width: 450px;
+    }  
+    .home_side_img {
+        right: 10%;
+        top: 30%;
+    }
+    
+    .home_side{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+  }
+
+  .toggle-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-button:hover svg {
+    fill: #FF5733; /* Change the color on hover */
+}
+
+.toggle-button svg {
+    fill: #666; /* Default color */
+    transition: fill 0.3s ease; /* Smooth transition on hover */
+    width: 40px; /* Adjust icon size as needed */
+    height: 40px; /* Adjust icon size as needed */
+    padding-top: 12px;
+}
+
+
+
+/* -------Form-------- */
+
+.login {
+    height: 73vh;
+}
+.login form {
+    
+    width: 450px;
+    padding: 40px;
+    background-color: var(--background-color);
+    border: 0.5px solid #2c3135;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 550px;
+    border-radius: 5px;
+    color: var(--text-color);
+    box-shadow: -10px 10px 0 0 var(--accent-color);
+}
+
+.login form h1 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.login form .inputText {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.login form label {
+    font-weight: 500;
+}
+
+
+.login form input[type="email"], .login form input[type="password"], .login form input[type="text"] {
+    width: 100%;
+    padding: 7px 5px;
+    border: 0.5px solid rgb(201, 201, 201);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+.login form button {
+    margin-top: 30px;
+    width: 100%;
+    background-color: var(--accent-color);
+    color:  var(--white);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.login form .error{
+    padding: 8px;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.281);
+    color: rgba(255, 0, 0, 0.815);
+    border: 0.5px solid rgba(255, 0, 0, 0.651);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.login form .link {
+    text-align: center;
+    color: var(--white);
+}
+
+@media screen and (max-width: 562px) {
+    .login form {
+        width: 90%;
+    }
+  }

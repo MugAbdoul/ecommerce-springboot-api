@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="theme" rel="stylesheet" href="/css/userquizC.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" crossorigin="anonymous">
+    <title>Admin Quiz Page</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="home_logo">
+                <a href="/user-home">
+                    <p class="logo1">QuizApp..</p>
+                </a>
+            </div>
+            <ul class="items">
+                <li class="item">
+                    <a href="/" class="item_link">Home</a>
+                </li>
+                <li class="item">
+                    <a href="/user-home" class="item_link">Start Quiz</a>
+                </li>
+                <li class="item">
+                    <a href="/logout" class="item_link">Logout</a>
+                </li>
+                
+            </ul>
+        </header>
+
+        <section class="admin_section quiz">
+            <div class="admin_section_right">
+                <div class="admin_section_right_bottom">
+                    <p class="admin_section_right_bottom_title">Quizzes</p>
+                    <div class="admin_section_right_bottom_items">
+                        <div class="admin_section_right_bottom_item" th:each="quiz : ${quizzes}">
+                            <div class="admin_section_right_bottom_item_left">
+                                <h5 th:text="${quiz.title}">Quiz</h5>
+                                <p th:text="${quiz.description}">Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur.</p>
+                                <p class="dur"><span class="span_new">Duration:</span> <span th:text="${quiz.durationInMinutes} + ' min'"></span></p>
+                                <div>
+                                    <a th:href="@{/user-home/quiz?quizId={id}&ui={ui}(id=${quiz.id}, ui=${session.user.id})}">Start quiz</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

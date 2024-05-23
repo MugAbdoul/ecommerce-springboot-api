@@ -1,0 +1,332 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+/* Define your color variables */
+:root {
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --accent-color: #034917;
+  --light-accent-color: rgba(3, 73, 23, 0.54); /* Transparent version of accent color */
+  --white: #fff;
+}
+
+/* Use the variables in your styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.home_logo a{
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.logo1 {
+    color: var(--accent-color);
+    font-size: 30px !important;
+}
+.logo2 {
+    font-size: 20px !important;
+    margin-left: 40px;
+    color: var(--text-color);
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    margin: 0 20px;
+    list-style: none;
+}
+
+.item a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-button:hover svg {
+    fill: #FF5733; /* Change the color on hover */
+}
+
+.toggle-button svg {
+    fill: #666; /* Default color */
+    transition: fill 0.3s ease; /* Smooth transition on hover */
+    width: 40px; /* Adjust icon size as needed */
+    height: 40px; /* Adjust icon size as needed */
+    padding-top: 12px;
+}
+
+@media screen and (max-width: 1606px) {
+    .item {
+        margin: 0 10px;
+    }
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+  }
+
+@media screen and (max-width: 1036px) {
+    .admin_section {
+        width: 100%;
+        flex-direction: column;
+    }
+    .admin_section_left {
+        width: 100% !important;
+        border-right: 0px !important;
+        padding: 10px !important;
+        height: auto !important;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .admin_section_right {
+        width: 100% !important;
+    }
+}
+
+
+
+.admin_section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.admin_section.quiz .admin_section_right {
+    width: 100% !important;
+}
+
+.admin_section_left {
+    width: 30%;
+    height: 600px;
+    border-right: 0.5px solid rgb(197, 197, 197);
+    padding-right: 40px;
+}
+
+.admin_section_left h4 {
+    margin-top: 5px;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.admin_section_left_title {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.admin_section_left_desc {
+    margin-bottom: 20px;
+}
+
+.admin_section_left_duration span {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.admin_section_right {
+    width: 70%;
+}
+
+.admin_section_right_top {
+    width: 600px;
+    margin-bottom: 40px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.create_quiz_btn svg {
+    margin-right: 10px;
+}
+
+.create_quiz_btn {
+    width: 100%;
+    border: 1px solid rgb(206, 206, 206);
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.admin_section_right_bottom {
+    width: 600px;
+    margin-bottom: 40px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.admin_section_right_bottom_title {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.admin_section_right_bottom_items {
+    width: 100%;
+}
+
+.admin_section_right_bottom_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    background-color: var(--background-color);
+    padding: 20px 10px ;
+    border-radius: 5px;
+}
+
+.admin_section_right_bottom_item_left {
+    width: 100%;
+    padding: 10px;
+}
+
+.admin_section_right_bottom_item_left a {
+    margin: auto;
+    margin-top: 20px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.admin_section_right_bottom_item_left h5 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.admin_section_right_bottom_item_left div {
+    margin-top: 30px;
+}
+
+.admin_section_right_bottom_item_left .dur {
+    margin-top: 5px;
+}
+
+.admin_section_right_bottom_item_left .span_new {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* .admin_section_right_bottom_item_right a{
+    color: var(--text-color);
+    margin: 0 5px;
+    text-decoration: none;
+} */
+
+.userQuiz_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.userQuiz_title {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.userQuiz_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 7px;
+    font-size: 13px;
+}
+
+.userQuiz_menu li{
+    margin: 0 3px;
+}
+
+.userQuiz {
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0.5px solid #0349171a;
+    border-radius: 5px;
+}
+
+.userQuiz_bottom {
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    background-color: #03491709;
+    border-top: 0.5px solid #0349171a;
+}
+
+.score {
+    padding: 3px 5px;
+    background-color: #0349171a;
+    border-radius: 4px;
+}
+
+.userQuiz_bottom .labelOption {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.form_radio span {
+    font-size: 14px;
+}
+
+.userQuiz_bottom button {
+    padding: 3px 15px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.finishedQ {
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    margin: 80px 0;
+}

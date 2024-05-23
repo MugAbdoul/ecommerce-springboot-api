@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Denied</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    body {
+        background-color: var(--background-color);
+        color: var(--text-color);
+    }
+    .accessDenied {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+</style>
+<body>
+    <div class="accessDenied">
+        <h1>Oops! Looks like you've reached the wrong dashboard.</h1>
+        <p>The Admin dashboard is for authorized admins only. Head back to the user dashboard using <a href="user-home">this link</a>.</p>
+    </div>
+</body>
+</html>

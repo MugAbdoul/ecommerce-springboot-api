@@ -1,0 +1,343 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+/* Define your color variables */
+:root {
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --accent-color: #034917;
+  --light-accent-color: rgba(3, 73, 23, 0.54); /* Transparent version of accent color */
+  --white: #fff;
+}
+
+/* Use the variables in your styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.home_logo a{
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.logo1 {
+    color: var(--accent-color);
+    font-size: 30px !important;
+}
+.logo2 {
+    font-size: 20px !important;
+    margin-left: 40px;
+    color: var(--text-color);
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    margin: 0 20px;
+    list-style: none;
+}
+
+.item a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-button:hover svg {
+    fill: #FF5733; /* Change the color on hover */
+}
+
+.toggle-button svg {
+    fill: #666; /* Default color */
+    transition: fill 0.3s ease; /* Smooth transition on hover */
+    width: 40px; /* Adjust icon size as needed */
+    height: 40px; /* Adjust icon size as needed */
+    padding-top: 12px;
+}
+
+@media screen and (max-width: 1606px) {
+    .item {
+        margin: 0 10px;
+    }
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+  }
+
+@media screen and (max-width: 1036px) {
+    .admin_section {
+        width: 100%;
+        flex-direction: column;
+    }
+    .admin_section_left {
+        width: 100% !important;
+        border-right: 0px !important;
+        padding: 10px !important;
+        height: auto !important;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .admin_section_right {
+        width: 100% !important;
+    }
+}
+
+
+
+.admin_section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.admin_section.quiz .admin_section_right {
+    width: 100% !important;
+}
+
+.admin_section_left {
+    width: 30%;
+    height: 600px;
+    border-right: 0.5px solid rgb(197, 197, 197);
+    padding-right: 40px;
+}
+
+.admin_section_left h4 {
+    margin-top: 5px;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.admin_section_left_title {
+    margin-bottom: 20px;
+    color: var(--text-color);
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.admin_section_left_desc {
+    margin-bottom: 20px;
+}
+
+.admin_section_left_duration span {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.admin_section_right {
+    width: 70%;
+}
+
+.admin_section_right_top {
+    width: 600px;
+    margin-bottom: 40px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.create_quiz_btn svg {
+    margin-right: 10px;
+}
+
+.create_quiz_btn {
+    width: 100%;
+    border: 1px solid rgb(206, 206, 206);
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.admin_section_right_bottom {
+    width: 600px;
+    margin-bottom: 40px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.admin_section_right_bottom_title {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.admin_section_right_bottom_items {
+    width: 100%;
+}
+
+.admin_section_right_bottom_item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    background-color: var(--background-color);
+    padding: 20px 10px ;
+    border-radius: 5px;
+}
+
+.admin_section_right_bottom_item_left {
+    width: 70%;
+}
+
+.admin_section_right_bottom_item_left h5 {
+    color: var(--accent-color);
+}
+
+.admin_section_right_bottom_item_right a{
+    color: var(--text-color);
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.admin_section_right_bottom_item_right a.trash {
+    color: rgba(255, 0, 0, 0.795);
+}
+
+.admin_section_right_bottom_item_right .edit {
+    border: none;
+    cursor: pointer;
+    color: green;
+}
+
+.admin_section_right_bottom_item_left .options {
+    margin-left: 40px;
+    margin-top: 7px;
+}
+
+.admin_section_right_bottom_item_left .option.active {
+    color: green;
+}
+
+
+.form_popup, .form_popup_edit, .form_popup_add {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.815);
+    display: none;
+}
+
+.form_popup.active, .form_popup_edit.active, .form_popup_add.active {
+    display: block;
+}
+
+
+.form_popup form, .form_popup_edit form, .form_popup_add form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    min-height: 400px;
+    padding: 60px 40px;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    box-shadow: 0px 0px 1px 1px gray;
+    border-radius: 5px;
+}
+
+.form_popup form h3, .form_popup_edit form h3 , .form_popup_add form h3 {
+    color: var(--accent-color);
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.form_popup .form_control, .form_popup_edit .form_control, .form_popup_add .form_control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 11px;
+}
+
+.form_popup .form_control label, .form_popup_edit .form_control label, .form_popup_add .form_control label {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.form_popup .form_control input, .form_popup_edit .form_control input, .form_popup_add .form_control input{
+    width: 100%;
+    padding: 5px 3px;
+    border: 0.5px solid rgb(201, 201, 201);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+.form_popup .form_control textarea, .form_popup_edit .form_control textarea, .form_popup_add .form_control textarea{
+    width: 100%;
+    padding: 5px 3px;
+    border: 0.5px solid rgb(201, 201, 201);
+    color: var(--text-color);
+    border-radius: 5px;
+    height: 80px;
+}
+
+.form_popup .form_control select, .form_popup_edit .form_control select, .form_popup_add .form_control select {
+    width: 100%;
+    padding: 5px 3px;
+    border: 0.5px solid rgb(201, 201, 201);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+.form_popup .form_buttons, .form_popup_edit .form_buttons, .form_popup_add .form_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+} 
+
+.form_popup .form_buttons button, .form_popup_edit .form_buttons button, .form_popup_add .form_buttons button  {
+    padding: 6px 30px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.form_popup .form_buttons button.save, .form_popup_edit .form_buttons button.save, .form_popup_add .form_buttons button.save{
+    background-color: var(--accent-color);
+    color: var(--white);
+}
